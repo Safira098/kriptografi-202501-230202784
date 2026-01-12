@@ -28,7 +28,7 @@ Selain manfaatnya, penggunaan kriptografi juga menimbulkan isu etika dan privasi
    
 ## 5. Source Code
 ## 6. Hasil dan Pembahasan
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47e433f5-a5b2-4335-9cf0-e9aa1f0f48d0" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b39459be-4eeb-4039-98fb-9c68f698b82e" />
 
 1. Analisis SSL/TLS Website E-commerce (Shopee)
 Website Shopee telah menggunakan protokol HTTPS yang menandakan penerapan SSL/TLS untuk mengamankan komunikasi data antara pengguna dan server. Hal ini dibuktikan dengan adanya ikon gembok pada browser serta sertifikat digital yang diterbitkan oleh Certificate Authority (CA) tepercaya. SSL/TLS memastikan data seperti login akun, alamat, dan transaksi tidak dapat disadap atau dimodifikasi oleh pihak tidak berwenang.
