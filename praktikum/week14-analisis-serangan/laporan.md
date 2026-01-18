@@ -12,7 +12,9 @@ Kelas: 5IKRB
 
 ## 2. Dasar Teori
 Sistem informasi nyata rentan terhadap berbagai jenis serangan siber yang bertujuan untuk mencuri, merusak, atau memanipulasi data. Jenis serangan yang umum terjadi antara lain SQL Injection, Man-in-the-Middle, brute force, phishing, dan malware. Serangan-serangan tersebut biasanya memanfaatkan kelemahan pada desain sistem, konfigurasi keamanan yang kurang baik, serta kurangnya penerapan mekanisme pengamanan data. Identifikasi jenis serangan menjadi langkah awal yang penting untuk memahami bagaimana ancaman bekerja dan bagian sistem mana yang paling rentan untuk diserang.
+
 Selain serangan langsung pada sistem, kelemahan juga sering ditemukan pada algoritma kriptografi yang digunakan untuk mengamankan data. Penggunaan algoritma yang sudah usang atau implementasi kriptografi yang tidak sesuai standar dapat menyebabkan data mudah didekripsi oleh pihak yang tidak berwenang. Contohnya adalah penggunaan algoritma hash yang lemah untuk penyimpanan kata sandi atau penggunaan kunci enkripsi dengan panjang yang tidak memadai. Evaluasi terhadap algoritma kriptografi diperlukan untuk memastikan bahwa metode pengamanan yang diterapkan masih relevan terhadap perkembangan teknologi dan kemampuan komputasi saat ini.
+
 Untuk meningkatkan keamanan sistem informasi, diperlukan rekomendasi algoritma kriptografi yang lebih kuat dan sesuai dengan kebutuhan sistem. Algoritma modern dengan tingkat keamanan tinggi, efisiensi yang baik, serta dukungan standar internasional dapat digunakan sebagai solusi perbaikan. Selain pemilihan algoritma yang tepat, penerapan manajemen kunci yang baik dan kombinasi dengan mekanisme keamanan lain seperti autentikasi berlapis juga sangat dianjurkan. Dengan demikian, sistem informasi dapat terlindungi secara lebih optimal dari berbagai ancaman keamanan yang terus berkembang.
 
 ## 3. Alat dan Bahan
