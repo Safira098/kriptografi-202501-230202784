@@ -83,6 +83,6 @@ Contoh:
 ## 10. Commit Log
 commit abc12345
 Author: safira dewi rahmatika safiraa1026@gmail.com
-Date:   2025-01-18
+Date:   2026-01-18
 
    wek14-analisis serangan : Percobaan brute force sederhana
