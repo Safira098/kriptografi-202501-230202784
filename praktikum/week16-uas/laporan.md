@@ -26,10 +26,89 @@ unik yang terhubung langsung ke sistem.
 pembatasan satu kali absensi dalam satu hari guna mencegah kecurangan. 
 
 ## 3. Alat dan Bahan
-- Python 3.x  
-- Visual Studio Code 
-- Git dan akun GitHub  
-- MetaMask 
+* Blockchain: Ethereum (Sepolia Testnet)
+* Smart Contract: Solidity
+* Wallet: MetaMask
+* Library Blockchain: Ethers.js
+* Frontend: HTML, CSS, JavaScript
+-  Kriptografi:
+  - Hashing (Keccak-256)
+  - Digital Signature (ECDSA Ethereum)
+
+## Deskripsi Sistem
+Sistem BlockAttend merupakan sistem absensi mahasiswa berbasis blockchain yang 
+dirancang untuk mencatat dan menyimpan data kehadiran secara aman, transparan, dan 
+tidak dapat dimanipulasi. Sistem ini memanfaatkan teknologi blockchain Ethereum pada 
+jaringan Sepolia testnet sebagai media penyimpanan data absensi, sehingga setiap data 
+kehadiran tercatat sebagai transaksi yang bersifat permanen (immutable). Dalam sistem ini, 
+proses absensi dilakukan oleh mahasiswa menggunakan akun wallet Ethereum masing
+masing yang terhubung melalui MetaMask. Wallet tersebut berfungsi sebagai identitas 
+digital mahasiswa yang terautentikasi secara kriptografis. Data absensi yang dikirimkan ke 
+sistem akan diproses oleh smart contract, kemudian disimpan di dalam blockchain dan dapat 
+diverifikasi oleh dosen maupun pihak terkait. 
+Aktor yang terlibat dalam sistem ini meliputi: 
+1. Mahasiswa, sebagai pihak yang melakukan absensi. 
+2. Dosen, sebagai pihak yang memantau dan memverifikasi kehadiran mahasiswa. 
+3. Blockchain Ethereum, sebagai media penyimpanan data absensi yang bersifat 
+terdesentralisasi. 
+
+## Alur Proses Sistem 
+Alur kerja sistem absensi BlockAttend dapat dijelaskan sebagai berikut: 
+1. Mahasiswa membuka aplikasi dan menghubungkan wallet MetaMask. 
+2. Sistem melakukan autentikasi pengguna berdasarkan alamat wallet Ethereum. 
+3. Mahasiswa melakukan absensi dengan mengirimkan transaksi ke smart contract. 
+4. Transaksi absensi ditandatangani secara kriptografis menggunakan private key 
+wallet pengguna. 
+5. Smart contract memverifikasi aturan absensi dan mencatat data kehadiran ke dalam 
+blockchain. 
+6. Data absensi yang telah tersimpan dapat dilihat dan diverifikasi oleh dosen melalui 
+aplikasi. 
+Alur ini memastikan bahwa setiap proses absensi tercatat secara aman dan tidak dapat 
+dimanipulasi.
+
+## Algoritma Kriptografi yang Digunakan 
+Sistem BlockAttend memanfaatkan beberapa algoritma kriptografi yang secara default 
+digunakan dalam jaringan Ethereum, yaitu: 
+1. Fungsi Hash Keccak-256 
+Keccak-256 digunakan sebagai fungsi hash untuk mengamankan data transaksi 
+dalam blockchain Ethereum. Fungsi hash ini menghasilkan nilai hash unik yang 
+mewakili data absensi. Setiap perubahan kecil pada data akan menghasilkan nilai 
+hash yang berbeda, sehingga integritas data dapat terjaga. 
+2. Kriptografi Kunci Publik (Elliptic Curve Cryptography – ECC) 
+Ethereum menggunakan algoritma kriptografi kunci publik berbasis kurva eliptik 
+untuk proses penandatanganan transaksi. Setiap pengguna memiliki pasangan 
+kunci publik dan kunci privat yang digunakan untuk menandatangani transaksi 
+absensi, sehingga menjamin keaslian dan identitas pengirim.
+
+##  Protokol Blockchain Ethereum dalam Sistem 
+Sistem BlockAttend memanfaatkan protokol blockchain Ethereum dalam proses pencatatan 
+data absensi. Setiap transaksi absensi yang dikirimkan oleh mahasiswa akan diproses 
+melalui jaringan Ethereum, divalidasi oleh node, dan kemudian dimasukkan ke dalam blok 
+yang terhubung secara kriptografis.Proses konsensus dalam jaringan Ethereum memastikan 
+bahwa hanya transaksi yang valid yang dapat dicatat ke dalam blockchain. Dengan 
+mekanisme ini, sistem mampu mencegah terjadinya manipulasi data dan memastikan bahwa 
+setiap absensi tercatat secara permanen dan dapat diverifikasi oleh publik.
+
+## Implementasi Smart Contract Absensi 
+Smart contract berperan sebagai komponen utama dalam sistem BlockAttend. Di dalam 
+smart contract ditanamkan aturan absensi yang mengatur proses pencatatan kehadiran 
+mahasiswa. Setiap transaksi absensi yang dikirimkan oleh mahasiswa akan diproses oleh 
+smart contract sesuai dengan aturan yang telah ditentukan. Salah satu aturan utama yang 
+diterapkan adalah pembatasan satu kali absensi dalam satu hari untuk setiap alamat wallet. 
+Aturan ini diterapkan secara otomatis oleh smart contract, sehingga tidak dapat diubah atau 
+dimanipulasi oleh pihak manapun. Dengan demikian, smart contract tidak hanya berfungsi 
+sebagai penyimpan data, tetapi juga sebagai pengendali logika sistem absensi. 
+
+## Penerapan Kriptografi 
+Penerapan kriptografi dalam sistem BlockAttend terjadi secara langsung pada proses 
+absensi mahasiswa. Ketika mahasiswa melakukan absensi, transaksi yang dikirimkan ke 
+smart contract akan ditandatangani secara digital menggunakan private key dari wallet 
+MetaMask masing-masing. Proses penandatanganan ini menjamin bahwa transaksi benar
+benar berasal dari pemilik wallet yang sah. Selain itu, data absensi yang dicatat ke dalam 
+blockchain diamankan menggunakan fungsi hash kriptografi yang menjadi bagian dari 
+mekanisme blockchain Ethereum. Setiap transaksi absensi memiliki hash unik yang 
+terhubung dengan blok sebelumnya, sehingga perubahan data absensi tidak dimungkinkan 
+tanpa merusak keseluruhan struktur blockchain. 
 
 ## 4. Langkah Percobaan (Panduan)
 Alur kerja sistem absensi BlockAttend dapat dijelaskan sebagai berikut: 
@@ -44,7 +123,7 @@ blockchain.
 aplikasi. 
 Alur ini memasti
 
-Cara Mengakses Aplikasi 
+## Cara Mengakses Aplikasi 
 Langkah-langkah mengakses aplikasi BlockAttend adalah sebagai 
 berikut: 
 1) Buka browser dan jalankan aplikasi BlockAttend melalui file 
@@ -56,7 +135,7 @@ index.html. atau melalui alamat yang telah disediakan.
 6) Setelah berhasil, alamat wallet akan ditampilkan dan status 
 berubah menjadi Connected.
 
-Panduan Penggunaan untuk Mahasiswa 
+## Panduan Penggunaan untuk Mahasiswa 
 a. Mendaftarkan Nama Mahasiswa 
 1) Pastikan wallet MetaMask sudah terhubung. 
 2) Pada bagian Mahasiswa, masukkan Nama Lengkap pada 
@@ -76,7 +155,7 @@ Hari Ini.
 Setiap mahasiswa hanya dapat melakukan absensi satu kali dalam satu 
 hari sesuai aturan smart contract.
 
-Panduan Penggunaan untuk Admin 
+## Panduan Penggunaan untuk Admin 
 Admin memiliki akses untuk melihat seluruh data absensi mahasiswa. 
 Langkah-langkah: 
 1) Hubungkan wallet admin menggunakan MetaMask. 
@@ -117,7 +196,37 @@ Form Mahasiswa
 
 <img width="734" height="385" alt="image" src="https://github.com/user-attachments/assets/c3328261-008a-427e-a605-7d18d00eb3c4" />
 
-## 7. Jawaban Pertanyaan
+## Hasil Pengujian 
+Berdasarkan hasil pengujian yang telah dilakukan, diperoleh hasil sebagai berikut: 
+1. Sistem berhasil menghubungkan wallet MetaMask sebagai identitas mahasiswa. 
+2. Proses absensi berhasil dikirim sebagai transaksi ke blockchain Ethereum Sepolia. 
+3. Data absensi tercatat secara permanen dan tidak dapat diubah setelah transaksi 
+dikonfirmasi. 
+4. Smart contract berhasil menolak absensi ganda dalam satu hari. 
+5. Data absensi dapat ditampilkan kembali melalui aplikasi dan diverifikasi 
+menggunakan blockchain explorer. 
+Hasil ini menunjukkan bahwa sistem BlockAttend telah berjalan sesuai dengan desain dan 
+tujuan yang diharapkan.
+
+## ANALISIS KEAMANAN 
+- Keamanan Data Absensi 
+Keamanan data absensi pada sistem BlockAttend dijamin melalui penerapan teknologi 
+blockchain dan kriptografi. Data absensi yang tersimpan di blockchain bersifat immutable, 
+sehingga tidak dapat diubah atau dihapus oleh pihak manapun setelah tercatat. Hal ini 
+meningkatkan kepercayaan terhadap keakuratan data kehadiran mahasiswa.
+- Pencegahan Kecurangan dan Serangan 
+Sistem BlockAttend dirancang untuk mencegah berbagai bentuk kecurangan, seperti 
+pemalsuan absensi dan manipulasi data. Autentikasi berbasis wallet Ethereum memastikan 
+bahwa setiap absensi dilakukan oleh pemilik akun yang sah. Selain itu, penggunaan tanda 
+tangan digital dan smart contract mampu mencegah terjadinya absensi ganda maupun 
+perubahan data absensi. Potensi serangan seperti pemalsuan identitas dan perubahan data 
+dapat diminimalisir karena setiap transaksi harus ditandatangani secara kriptografis dan 
+diverifikasi oleh jaringan blockchain. 
+- Keterbatasan Keamanan Sistem 
+Meskipun memiliki tingkat keamanan yang tinggi, sistem BlockAttend masih memiliki 
+beberapa keterbatasan, antara lain ketergantungan pada keamanan wallet pengguna serta 
+waktu konfirmasi transaksi blockchain. Selain itu, sistem belum dilengkapi dengan 
+mekanisme pemulihan apabila pengguna kehilangan akses ke wallet mereka. 
 
 ## 8. Kesimpulan
 Kesimpulan
