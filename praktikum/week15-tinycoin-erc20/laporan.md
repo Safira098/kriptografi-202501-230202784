@@ -29,9 +29,19 @@ Hasil akhir dari pengembangan proyek kemudian disusun dalam bentuk laporan tekni
 4. Dokumentasi
 
 ## 5. Source Code
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract TinyCoin is ERC20 {
+    constructor(uint256 initialSupply) ERC20("TinyCoin", "TNC") {
+        _mint(msg.sender, initialSupply);
+    }
+}
 
 ## 6. Hasil dan Pembahasan
+<img width="1910" height="1078" alt="Screenshot 2026-01-25 211828" src="https://github.com/user-attachments/assets/c4e90622-ccb5-4b74-aebb-4eada6d7d7ee" />
 
 
 ## 7. Jawaban Pertanyaan
@@ -45,7 +55,11 @@ Mekanisme transfer token dalam kontrak ERC20 dilakukan melalui fungsi transfer()
 Risiko utama dalam implementasi smart contract meliputi kesalahan logika kode, kerentanan keamanan seperti reentrancy attack, serta kesalahan dalam pengelolaan hak akses. Karena smart contract bersifat tidak dapat diubah setelah dipublikasikan, kesalahan kecil dapat menyebabkan kerugian besar. Untuk mitigasi risiko tersebut, organisasi perlu menerapkan praktik pengembangan yang aman seperti audit kode secara menyeluruh, pengujian ekstensif, penggunaan library standar yang terpercaya, serta menerapkan mekanisme kontrol akses dan pembatasan fungsi penting. Dengan langkah-langkah ini, keamanan dan keandalan smart contract dapat ditingkatkan secara signifikan.
 
 ## 8. Kesimpulan
+Berdasarkan praktikum minggu ke-15 dengan topik Tinycoin, dapat disimpulkan bahwa pengembangan proyek sederhana berbasis algoritma kriptografi melalui implementasi smart contract ERC20 memberikan pemahaman yang lebih nyata mengenai penerapan keamanan informasi dalam ekosistem blockchain. Standar ERC20 memungkinkan pembuatan token dengan struktur yang seragam sehingga dapat digunakan secara luas oleh berbagai aplikasi terdesentralisasi, dompet digital, maupun platform pertukaran.
 
+Proses pembuatan dan deploy kontrak Tinycoin menunjukkan bahwa mekanisme transfer token dapat berjalan secara otomatis, transparan, dan tercatat permanen di blockchain tanpa memerlukan pihak perantara. Selain itu, praktikum ini juga memperlihatkan pentingnya pengujian serta dokumentasi proyek melalui GitHub agar pengembangan lebih terstruktur dan mudah ditelusuri.
+
+Namun, implementasi smart contract juga memiliki risiko keamanan seperti kesalahan logika kode dan kerentanan serangan. Oleh karena itu, diperlukan audit kode, pengujian menyeluruh, serta penggunaan library terpercaya sebagai langkah mitigasi. Dengan demikian, praktikum ini berhasil memberikan pengalaman dalam membangun token sederhana sekaligus memahami aspek keamanan dan tantangan dalam pengembangan smart contract.
 
 ## 9. Daftar Pustaka
 (Cantumkan referensi yang digunakan.  
@@ -56,8 +70,8 @@ Contoh:
 ---
 
 ## 10. Commit Log
-commit abc12345
-Author: Nama Mahasiswa <email>
+
+Author: Safira Dewi Rahmatika <safiraa1026@gmail.com>
 Date:   2026-0-18
 
    week15-tinycoin : 
